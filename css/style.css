@@ -25,9 +25,42 @@ body {
   color: var(--grey);
 }
 
+.header {
+  align-items: center;
+  background-color: var(--tint-brand-color);
+  display: flex;
+  height: 9.6rem;
+  justify-content: space-between;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+.main-nav-list {
+  display: flex;
+  gap: 3.2rem;
+  list-style: none;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  color: var(--dark-grey);
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: var(--shade-brand-color);
+}
+
 .section-hero {
   background-color: var(--tint-brand-color);
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 9.6rem 0;
 }
 
 .hero {
@@ -37,6 +70,7 @@ body {
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   max-width: 130rem;
+  padding: 0 3.2rem;
 }
 
 .heading-primary {
