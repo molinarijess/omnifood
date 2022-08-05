@@ -3,6 +3,7 @@
 :root {
   --brand-color: #e67e22;
   --tint-brand-color: #fdf2e9;
+  --soft-brand-color: #fae5d3;
   --shade-brand-color: #cf711f;
   --soft-grey: #ddd;
   --grey: #555;
@@ -188,6 +189,32 @@ body {
   align-items: center;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
+  background-color: var(--tint-brand-color);
+  padding-bottom: 60%;
+  width: 60%;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  background-color: var(--soft-brand-color);
+  width: 45%;
+  padding-bottom: 45%;
+  z-index: -1;
 }
 
 .step-img {
