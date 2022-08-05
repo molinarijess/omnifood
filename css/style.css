@@ -6,6 +6,7 @@
   --shade-brand-color: #cf711f;
   --grey: #555;
   --dark-grey: #333;
+  --border-radius-default: 9px;
 }
 
 * {
@@ -19,10 +20,10 @@ html {
 }
 
 body {
-  font-family: "Rubik", sans-serif;
-  line-height: 1;
-  font-weight: 400;
   color: var(--grey);
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .header {
@@ -39,6 +40,7 @@ body {
 }
 
 .main-nav-list {
+  align-items: center;
   display: flex;
   gap: 3.2rem;
   list-style: none;
@@ -47,6 +49,7 @@ body {
 .main-nav-link:link,
 .main-nav-link:visited {
   color: var(--dark-grey);
+  display: inline-block;
   font-size: 1.8rem;
   font-weight: 500;
   text-decoration: none;
@@ -56,6 +59,19 @@ body {
 .main-nav-link:hover,
 .main-nav-link:active {
   color: var(--shade-brand-color);
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  color: #fff;
+  background-color: var(--brand-color);
+  border-radius: var(--border-radius-default);
+  padding: 1.2rem 2.4rem;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: var(--shade-brand-color);
 }
 
 .section-hero {
@@ -77,9 +93,9 @@ body {
   color: var(--dark-grey);
   font-size: 5.2rem;
   font-weight: 700;
-  margin-bottom: 3.2rem;
   letter-spacing: -0.5px;
   line-height: 1.05;
+  margin-bottom: 3.2rem;
 }
 
 .hero-description {
@@ -90,14 +106,14 @@ body {
 
 .btn:link,
 .btn:visited {
-  border-radius: 9px;
+  border-radius: var(--border-radius-default);
   color: #fff;
   display: inline-block;
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   text-decoration: none;
-  transition: all 0.3s;
+  transition: background-color 0.3s;
 }
 
 .btn--full:link,
@@ -138,7 +154,7 @@ body {
   height: 4.8rem;
   width: 4.8rem;
   border: 3px solid var(--tint-brand-color);
-  border-radius: 50%;
+  border-radius: var(--border-radius-default);
   margin-right: -1.6rem;
 }
 
