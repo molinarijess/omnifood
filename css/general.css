@@ -94,6 +94,26 @@
   color: var(--shade-brand-color);
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+}
+
+.list-item {
+  align-items: center;
+  display: flex;
+  font-size: 1.8rem;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  color: var(--brand-color);
+  height: 3rem;
+  width: 3rem;
+}
+
 .container {
   margin: 0 auto;
   max-width: 120rem;
@@ -104,6 +124,10 @@
   display: grid;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .grid--2-cols {

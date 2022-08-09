@@ -289,26 +289,6 @@ body {
   width: 2.4rem;
 }
 
-.list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-  list-style: none;
-}
-
-.list-item {
-  align-items: center;
-  display: flex;
-  font-size: 1.8rem;
-  gap: 1.6rem;
-}
-
-.list-icon {
-  color: var(--brand-color);
-  height: 3rem;
-  width: 3rem;
-}
-
 .all-recipes {
   font-size: 1.8rem;
   text-align: center;
@@ -367,4 +347,106 @@ body {
 
 .gallery-item img:hover {
   transform: scale(1.1);
+}
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.princing-plan {
+  border-radius: 11px;
+  width: 75%;
+}
+
+.princing-plan--starter {
+  border: 2px solid var(--tint-brand-color);
+  justify-self: end;
+  padding: 4.6rem;
+}
+
+.princing-plan--complete {
+  background-color: var(--tint-brand-color);
+  overflow: hidden;
+  padding: 4.8rem;
+  position: relative;
+}
+
+.princing-plan--complete::after {
+  background-color: #ffd43b;
+  color: var(--dark-grey);
+  content: "best value";
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.8rem 8rem;
+  position: absolute;
+  right: -18%;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  top: 6%;
+}
+
+.plan-header {
+  margin-bottom: 4.8rem;
+  text-align: center;
+}
+
+.plan-name {
+  color: var(--shade-brand-color);
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+  text-transform: uppercase;
+}
+
+.plan-price {
+  color: var(--dark-grey);
+  font-size: 6.2rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  color: #6f6f6f;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.plan-sign-up {
+  margin-top: 4.8rem;
+  text-align: center;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.feature-icon {
+  background-color: var(--tint-brand-color);
+  border-radius: 50%;
+  color: var(--brand-color);
+  height: 3.2rem;
+  margin-bottom: 3.2rem;
+  padding: 1.6rem;
+  width: 3.2rem;
+}
+
+.feature-title {
+  color: var(--dark-grey);
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
