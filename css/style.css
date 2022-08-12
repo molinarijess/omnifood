@@ -21,6 +21,18 @@ html {
   font-size: 62.5%;
 }
 
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   color: var(--grey);
   font-family: "Rubik", sans-serif;
@@ -37,6 +49,12 @@ body {
   padding: 0 4.8rem;
 }
 
+@media (max-width: 75em) {
+  .header {
+    padding: 0 3.2rem;
+  }
+}
+
 .logo {
   height: 2.2rem;
 }
@@ -44,8 +62,14 @@ body {
 .main-nav-list {
   align-items: center;
   display: flex;
-  gap: 3.2rem;
+  gap: 4.8rem;
   list-style: none;
+}
+
+@media (max-width: 75em) {
+  .main-nav-list {
+    gap: 3.2rem;
+  }
 }
 
 .main-nav-link:link,
@@ -91,10 +115,45 @@ body {
   padding: 0 3.2rem;
 }
 
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+}
+
+@media (max-width: 75em) {
+  .hero {
+    gap: 4.8rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .hero {
+    gap: 6.4rem;
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+  }
+
+  .hero-text-box,
+  .hero-image-box {
+    text-align: center;
+  }
+}
+
 .hero-description {
   font-size: 2rem;
-  margin-bottom: 4.8rem;
   line-height: 1.5;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+@media (max-width: 59em) {
+  .hero-img {
+    width: 60%;
+  }
 }
 
 .delivered-meals {
@@ -102,6 +161,13 @@ body {
   display: flex;
   gap: 1.6rem;
   margin-top: 8rem;
+}
+
+@media (max-width: 59em) {
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
 }
 
 .delivered-imgs {
@@ -155,8 +221,10 @@ body {
   opacity: 50%;
 }
 
-.hero-img {
-  width: 100%;
+@media (max-width: 59em) {
+  .logos img {
+    height: 2.4rem;
+  }
 }
 
 .section-how {
@@ -168,6 +236,12 @@ body {
   font-size: 8.6rem;
   font-weight: 600;
   margin-bottom: 1.2rem;
+}
+
+@media (max-width: 59em) {
+  .step-number {
+    font-size: 7.4rem;
+  }
 }
 
 .step-description {
@@ -233,6 +307,12 @@ body {
 
 .meal-content {
   padding: 3.2rem 4.8rem 4.8rem;
+}
+
+@media (max-width: 59em) {
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem;
+  }
 }
 
 .meal-tags {
@@ -301,8 +381,20 @@ body {
   grid-template-columns: 55fr 45fr;
 }
 
+@media (max-width: 59em) {
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+}
+
 .testimonials-container {
   padding: 9.6rem;
+}
+
+@media (max-width: 75em) {
+  .testimonials-container {
+    padding: 9.6rem 3.2rem;
+  }
 }
 
 .testimonials {
@@ -333,6 +425,18 @@ body {
   gap: 1.6rem;
   grid-template-columns: repeat(3, 1fr);
   padding: 1.6rem;
+}
+
+@media (max-width: 84em) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 59em) {
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .gallery-item {
@@ -468,6 +572,12 @@ body {
   overflow: hidden;
 }
 
+@media (max-width: 59em) {
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
 .cta-text-box {
   color: #45260a;
   padding: 4.8rem 6.4rem 6.4rem;
@@ -500,6 +610,12 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 2.4rem;
+}
+
+@media (max-width: 59em) {
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cta-form label {
