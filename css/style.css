@@ -19,6 +19,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 @media (max-width: 75em) {
@@ -38,6 +39,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   line-height: 1;
+  overflow-x: hidden;
 }
 
 .header {
@@ -47,6 +49,7 @@ body {
   height: 9.6rem;
   justify-content: space-between;
   padding: 0 4.8rem;
+  position: relative;
 }
 
 @media (max-width: 75em) {
@@ -72,6 +75,45 @@ body {
   }
 }
 
+@media (max-width: 59em) {
+  .main-nav {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.97);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s ease-in;
+    transform: translateX(100%);
+    width: 100%;
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+}
+
 .main-nav-link:link,
 .main-nav-link:visited {
   color: var(--dark-grey);
@@ -80,6 +122,13 @@ body {
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s;
+}
+
+@media (max-width: 59em) {
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
 }
 
 .main-nav-link:hover,
@@ -98,6 +147,29 @@ body {
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
   background-color: var(--shade-brand-color);
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 59em) {
+  .btn-mobile-nav {
+    display: block;
+  }
+}
+
+.icon-mobile-nav {
+  color: var(--dark-grey);
+  height: 4.8rem;
+  width: 4.8rem;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 .section-hero {
@@ -369,6 +441,13 @@ body {
   width: 2.4rem;
 }
 
+@media (max-width: 44em) {
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
 .all-recipes {
   font-size: 1.8rem;
   text-align: center;
@@ -457,25 +536,31 @@ body {
   padding: 9.6rem 0;
 }
 
-.princing-plan {
+.pricing-plan {
   border-radius: 11px;
   width: 75%;
 }
 
-.princing-plan--starter {
+@media (max-width: 44em) {
+  .pricing-plan {
+    width: 100%;
+  }
+}
+
+.pricing-plan--starter {
   border: 2px solid var(--tint-brand-color);
   justify-self: end;
   padding: 4.6rem;
 }
 
-.princing-plan--complete {
+.pricing-plan--complete {
   background-color: var(--tint-brand-color);
   overflow: hidden;
   padding: 4.8rem;
   position: relative;
 }
 
-.princing-plan--complete::after {
+.pricing-plan--complete::after {
   background-color: #ffd43b;
   color: var(--dark-grey);
   content: "best value";
@@ -659,6 +744,23 @@ body {
 .logo-col {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 44em) {
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
 }
 
 .footer-logo {
