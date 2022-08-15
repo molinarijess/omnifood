@@ -399,6 +399,12 @@ body {
   padding: 9.6rem 0;
 }
 
+@media (max-width: 34em) {
+  .section-meals {
+    padding: 6.4rem 0;
+  }
+}
+
 .meal {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
@@ -585,6 +591,12 @@ body {
 
 .section-pricing {
   padding: 9.6rem 0;
+}
+
+@media (max-width: 34em) {
+  .section-pricing {
+    padding: 6.4rem 0;
+  }
 }
 
 .pricing-plan {
@@ -805,6 +817,12 @@ body {
 .footer {
   border-top: 1px solid #eee;
   padding: 12.8rem 0;
+}
+
+@media (max-width: 34em) {
+  .footer {
+    padding: 6.4rem 0;
+  }
 }
 
 .grid--footer {
