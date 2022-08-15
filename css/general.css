@@ -82,6 +82,14 @@
   transition: all 0.3s;
 }
 
+@media (max-width: 34em) {
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+}
+
 .btn--full:link,
 .btn--full:visited {
   background-color: var(--brand-color);
@@ -179,6 +187,12 @@
   }
 }
 
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+}
+
 .grid:not(:last-child) {
   margin-bottom: 9.6rem;
 }
@@ -199,6 +213,14 @@
   .grid--3-cols,
   .grid--4-cols {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 34em) {
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
   }
 }
 
