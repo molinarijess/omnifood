@@ -1,12 +1,12 @@
 {
   "icons": [
     {
-      "scr": "img/android-touch-icon-192.png",
+      "src": "img/android-touch-icon-192.png",
       "type": "image/pgn",
       "sizes": "192x192"
     },
     {
-      "scr": "img/android-touch-icon-512.png",
+      "src": "img/android-touch-icon-512.png",
       "type": "image/pgn",
       "sizes": "512x512"
     }
