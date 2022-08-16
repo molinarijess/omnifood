@@ -159,6 +159,7 @@ body {
 @media (max-width: 59em) {
   .btn-mobile-nav {
     display: block;
+    z-index: 9999;
   }
 }
 
