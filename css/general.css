@@ -162,10 +162,18 @@
   line-height: 1.2;
 }
 
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
 .list-icon {
   color: var(--brand-color);
   height: 3rem;
   width: 3rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
 }
 
 .container {
